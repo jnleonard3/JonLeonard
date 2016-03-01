@@ -11,7 +11,8 @@ module.exports = {
   module: {
     loaders: [
       { loader: 'babel-loader', test: /\.js$/, include: /src/, exclude: /node_modules/ },
-      { loader: ExtractTextPlugin.extract('css?modules&importLoaders=1&localIdentName=[path]___[name]__[local]___[hash:base64:5]'), test: /\.css$/, include: /src/, exclude: /node_modules/ }
+      { loader: ExtractTextPlugin.extract('css?modules&importLoaders=1&localIdentName=[path]___[name]__[local]___[hash:base64:5]'), test: /\.css$/, include: /src/, exclude: /node_modules/ },
+      { test: /\.(png|jpg)$/, loader: "url-loader" }
     ]
   },
   plugins: [
